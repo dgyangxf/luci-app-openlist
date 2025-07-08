@@ -10,7 +10,6 @@ PKG_VERSION:=1.1.3
 PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI support for openlist
-LUCI_DEPENDS:=+alist
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
