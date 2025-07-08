@@ -6,10 +6,19 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-openlist
-PKG_VERSION:=1.1.3
+PKG_VERSION:=1.0.13
 PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI support for openlist
+LUCI_DEPENDS:=+luci-compat
+
+define Package/$(PKG_NAME)/postinst
+#!/bin/sh
+[ -n "${IPKG_INSTROOT}" ] || {
+	( . /etc/uci-defaults/50-luci-openlist ) && rm -f /etc/uci-defaults/50-luci-openlist
+	exit 0
+}
+endef
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
