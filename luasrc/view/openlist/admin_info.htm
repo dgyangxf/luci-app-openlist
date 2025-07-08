@@ -4,7 +4,7 @@
 	{
 		btn.disabled = true;
 		btn.value = '<%:Collecting data...%>';
-		XHR.get('<%=luci.dispatcher.build_url("admin", "nas", "openlist", "admin_info")%>',
+		XHR.get('<%=luci.dispatcher.build_url("admin", "services", "openlist", "admin_info")%>',
 			null,
 			function(x,rv)
 			{
