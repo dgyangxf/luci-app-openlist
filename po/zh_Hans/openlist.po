@@ -49,8 +49,8 @@ msgstr "未运行"
 msgid "Collecting data..."
 msgstr "收集数据..."
 
-msgid "NAS"
-msgstr "网络存储"
+msgid "services"
+msgstr "服务"
 
 msgid "User Manual"
 msgstr "用户手册"
